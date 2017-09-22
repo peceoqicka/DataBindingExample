@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="setting"
+            type="com.em.databindingexp.Setting" />
+
+        <variable
+            name="adapter"
+            type="com.em.databindingexp.SettingListAdapter" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_large_rect_button"
+        android:clickable="true"
+        android:onClick="@{(theView) -> adapter.onItemClick(theView,setting)}"
+        android:padding="10dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_item_setting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{setting.title}" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/swi_item_setting_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:checked="@={setting.selected}" />
+    </FrameLayout>
+</layout>

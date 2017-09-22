@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DatabindingExp</string>
+    <string name="silence_mode">静音模式</string>
+    <string name="vibrate_in_silence_mode">静音时震动</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="template_setting_state">%1$s状态:%2$s</string>
+</resources>
